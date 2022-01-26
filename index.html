@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Eric Demko</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" media="all">
+</head>
+<body>
+
+  <h2>Eric Demko's Homepage</h2>
+  <p>
+    I am a software engineer interested in designing ergonomic systems for writing correct, performant, evolvable software.
+    To that end, I study and experiment with the semantics of programming languages, especially drawing on developments in dependent type theory.
+    I strongly believe that formal mathematics is a powerful tool to sharpen one's ideas, and is especially under-used in software development, where fuzzy ideas breed bugs.
+  </p>
+  <p>
+    I currently work for <a href="https://layer3com.com/">Layer 3 Communications</a> in the Advanced Services division,
+      where I use Haskell to help build high-performance SIEM, NPM, and related network management tooling.
+    This work allows us to contribute open source Haskell libraries that improve the ecosystem's ability to operate on contiguous data, unlifted/unboxed data, and networking standards-related data.
+  </p>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="https://github.com/edemko">My Github</a></li>
+    <li><a href="https://github.com/edemko/technical-notes">My Technical Journal</a></li>
+    <li><a href="https://blag.edemko.net">A Poorer Molecular Biologist: my personal writing</a></li>
+    <li><a href="https://github.com/Zankoku-Okuno">My Old Github (currently moving)</a></li>
+    <li><a href="mailto:zankoku.okuno@gmail.com">Email Me</a></li>
+  </ul>
+  <h3>Software</h3>
+  <ul>
+    <li><a href="https://raw.githubusercontent.com/edemko/notes-typetheory/master/notation.pdf">Notions and Notations in Type Theory</a>:
+      me trying to decipher the type theory literature, so likely a suitable—if unpolished—resource for beginners
+      (<a href="https://github.com/edemko/notes-typetheory">repository</a>)
+    </li>
+    <li><a href="#sysadmin-util">System Administration Utilities</a></li>
+    <li><a href="https://github.com/edemko/haskell-circuit-boards">gerber file format</a> implemented in Haskell as an EDSL</li>
+    <li><a href="#job-stuff">Job stuff</a></li>
+  </ul>
+  <h3 id="sysadmin-util">System Administration Utilities</h3>
+  <ul>
+    <li><a href="https://github.com/edemko/will">will</a>: executable installation notes</li>
+    <li><a href="https://github.com/edemko/skel">skel</a>: retrieve and fill templated files and directories</li>
+    <li><a href="https://github.com/edemko/dotsync">dotsync</a>: not just my dotfiles, but also a system to synchronize them</li>
+    <li><a href="https://github.com/edemko/technicolor">technicolor</a>: interface to terminal coloring</li>
+    <li><a href="https://github.com/edemko/gitstat">gitstat</a>: check that a git repo is up to dat with upstream</li>
+  </ul>
+  <h3>The Zedo Build System</h3>
+  <p>
+    Inspired by <a href="https://cr.yp.to/redo.html">DJB's redo proposal</a>, I periodically experiment with improvements to the interface and specification.
+    These are still not quite stable or fully-featured, but every time I look at it again, I get a little closer.
+  </p>
+  <ul>
+    <li><a href="https://github.com/edemko/zedo-shim/settings">zedo-shim</a>: non-incremental, single bash script</li>
+    <li><a href="https://github.com/edemko/zedo-shim/settings">zedo</a> (WIP) full bash implementation with specification</li>
+  </ul>
+  <h3 id="job-stuff">Job Stuff</h3>
+  <ul>
+    <li><a href="https://github.com/Zankoku-Okuno/rodb-writer">rodb-writer</a></li>
+    <li><a href="https://github.com/Zankoku-Okuno/masstree">masstree</a></li>
+    <li><a href="https://github.com/Zankoku-Okuno/array-statistics">array-statistics</a></li>
+    <li>TODO: stuff from other orgs</li>
+  </ul>
+  <h3>Language Experiments</h3>
+  <p>
+    This section is more for my own notes.
+    I frankly have too many irons in the fire/pots on the stove/planes in the sky/whatever, and it's nice to have some sort of overview.
+  </p>
+  <ul>
+    <li><a href="https://github.com/edemko/eexprs">e-exprs</a>:
+      I never want to write a parser again.
+      E-exprs are based on s-exprs, but allow several more forms to aid with the ergonomics.
+      Highlights include: indented blocks, separating terms by commas/semicolons, dot-access syntax.
+    </li>
+    <li><a href="https://github.com/edemko/nanopass">Nanopass</a>
+      a Haskell port of the <a href="https://nanopass.org/documentation.html">Nanopass Compiler Framework</a>.
+      I absolutely fell in love with this idea when I first saw it, but I was unwilling to give up static typing.
+      Now, I have statically-typed nanopass, and I can rest easy again.
+    </li>
+    <li><a href="https://github.com/edemko/bsvm">BVSM</a>:
+      a virtual machine that could reasonably be hand-compiled if necessary.
+      I thought it would be useful as a ground for bootstrapped compilers, bit it turns out that I need to balance the ground language for both ease of implementation and implementing _with_.
+      It may be possible to pivot into lisp-like semantics if I can build a simple-enough garbage collector.
+    </li>
+    <li><a href="https://github.com/edemko/chimney">C Shim Library</a>:
+      contains common C algorithms that usually just keep getting re-implemented.
+    </li>
+    <li><a href="https://github.com/edemko/ediacara">Ediacara</a>:
+      a portable assembler because C isn't.
+      Ediacara should have assembly notions built-in from the start: "advanced" control-flow (like tail-calls and escape continuations), and arbitrary calling conventions per-function.
+    </li>
+    <li><a href="https://github.com/edemko/fpgc">Functional Programming Garbage Collector</a>
+      aims to be a standard garbage collector written in C for general-purpose functional programming language runtimes.
+      It is currently just some notes on what I need to support and how I might do it.
+    </li>
+    <li><a href="https://github.com/edemko/anemone">Anemone</a>
+      attempts to pack as many abstractive features as possible (i.e. first-class everything) into a language;
+      the focus is on operational rather than static semantics
+    </li>
+  </ul>
+  <h3>Random Corner</h3>
+  <ul>
+    <li><a href="https://github.com/edemko/env-cabal/settings">env-cabal</a>: find exes produced by cabal and put them <code>&lt;project&gt;/bin/</code></li>
+    <li><a href="https://github.com/edemko/haxplay/settings">haxplay</a>: because music players keep screwing up my metadata</li>
+    <li><a href="https://clock.edemko.net">a clock/astrolabe</a> I started work on a while back</li>
+    <li><a href="https://github.com/edemko/sfcc">My Master's Thesis</a> which describes first-class continuations and their applications. I don't actually recommend reading it unless perhaps you want an introduction to their uses. However, I realized literally days after defending it that there's an improvement to be made to the formal system, and I've only found more improvements since.</li>
+  </ul>
+
+
+  <!-- <hr>
+  <p><small>
+    <a id="to-footnote-1" href="#from-footnote-1">[1]</a>:
+    Which is <em>not</em> to say that test suites are never useful!
+    I personally think that writing a test suite for a parser is less work
+      than trying to figure out and formalize every property that the parser should have.
+  </small></p> -->
+</body>
+</html>
