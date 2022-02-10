@@ -33,9 +33,24 @@
       me trying to decipher the type theory literature, so likely a suitable—if unpolished—resource for beginners
       (<a href="https://github.com/edemko/notes-typetheory">repository</a>)
     </li>
+    <li><a href="#lang-tools">Language Building Tools</a></li>
     <li><a href="#sysadmin-util">System Administration Utilities</a></li>
     <li><a href="https://github.com/edemko/haskell-circuit-boards">gerber file format</a> implemented in Haskell as an EDSL</li>
     <li><a href="#job-stuff">Job stuff</a></li>
+  </ul>
+  <h3 id="lang-tools">Language Building Tools</h3>
+  <ul>
+    <li><a href="https://github.com/edemko/c-big-literals">Big Literals</a>: tiny library so compilers can work with big number literals</li>
+    <li><a href="https://github.com/edemko/eexprs">e-exprs</a>:
+      I never want to write a parser again.
+      E-exprs are based on s-exprs, but allow several more forms to aid with the ergonomics.
+      Highlights include: indented blocks, separating terms by commas/semicolons, dot-access syntax.
+    </li>
+    <li><a href="https://github.com/edemko/nanopass">Nanopass</a>
+      a Haskell port of the <a href="https://nanopass.org/documentation.html">Nanopass Compiler Framework</a>.
+      I absolutely fell in love with this idea when I first saw it, but I was unwilling to give up static typing.
+      Now, I have statically-typed nanopass, and I can rest easy again.
+    </li>
   </ul>
   <h3 id="sysadmin-util">System Administration Utilities</h3>
   <ul>
@@ -67,16 +82,6 @@
     I frankly have too many irons in the fire/pots on the stove/planes in the sky/whatever, and it's nice to have some sort of overview.
   </p>
   <ul>
-    <li><a href="https://github.com/edemko/eexprs">e-exprs</a>:
-      I never want to write a parser again.
-      E-exprs are based on s-exprs, but allow several more forms to aid with the ergonomics.
-      Highlights include: indented blocks, separating terms by commas/semicolons, dot-access syntax.
-    </li>
-    <li><a href="https://github.com/edemko/nanopass">Nanopass</a>
-      a Haskell port of the <a href="https://nanopass.org/documentation.html">Nanopass Compiler Framework</a>.
-      I absolutely fell in love with this idea when I first saw it, but I was unwilling to give up static typing.
-      Now, I have statically-typed nanopass, and I can rest easy again.
-    </li>
     <li><a href="https://github.com/edemko/bsvm">BVSM</a>:
       a virtual machine that could reasonably be hand-compiled if necessary.
       I thought it would be useful as a ground for bootstrapped compilers, bit it turns out that I need to balance the ground language for both ease of implementation and implementing _with_.
