@@ -1,3 +1,0 @@
-document.addEventListener((evt) => {
-    // TODO
-})

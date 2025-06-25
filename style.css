@@ -1,8 +1,58 @@
 @charset "utf-8";
 
-body {
-  margin: auto;
-  margin-top: auto;
-  max-width: 60em;
-  margin-top: 3em;
+:root {
+  --black: #000000;
+  --base00: #030804;
+  --base01: #091913;
+  --base02: #082a26;
+  --base03: #014441;
+  --base04: #8eb1d1;
+  --base05: #a2b1d2;
+  --base06: #c8caee;
+  --base07: #e8e4fe;
+  --base08: #cf6a5f;
+  --base09: #e0905a;
+  --base0A: #c8a244;
+  --base0B: #7fb66a;
+  --base0C: #3aacc3;
+  --base0D: #7080c1;
+  --base0E: #ad73b9;
+  --base0F: #ca5c83;
+  --white: #ffffff;
 }
+
+:root {
+  --default-background: var(--base00);
+  --lighter-background: var(--base01);
+  --selection: var(--base02);
+  --comment: var(--base03);
+  --line-highlight: var(--base03);
+  --dark-foreground: var(--base04);
+  --default-foreground: var(--base05);
+  --light-foreground: var(--base06);
+  --lighter-foreground: var(--base07);
+
+  --primary: var(--base0B);
+  --secondary: var(--base0D);
+}
+
+
+
+
+
+body {
+  background-color: var(--black);
+}
+main {
+  background-color: var(--default-background);
+  color: var(--default-foreground);
+  padding: 1em;
+  margin: 1.5em;
+  border: 3px var(--lighter-background) solid;
+  border-radius: 0.5em;
+}
+a:link {
+  color: var(--primary);
+}
+a:visited {
+  color: var(--secondary);
