@@ -1,23 +1,27 @@
 @charset "utf-8";
 
+/************************************
+              Colors
+************************************/
+
 :root {
   --black: #000000;
-  --base00: #030804;
-  --base01: #091913;
-  --base02: #082a26;
-  --base03: #014441;
-  --base04: #8eb1d1;
-  --base05: #a2b1d2;
-  --base06: #c8caee;
-  --base07: #e8e4fe;
-  --base08: #cf6a5f;
-  --base09: #e0905a;
-  --base0A: #c8a244;
-  --base0B: #7fb66a;
-  --base0C: #3aacc3;
-  --base0D: #7080c1;
-  --base0E: #ad73b9;
-  --base0F: #ca5c83;
+  --base00: #0d0b0a;
+  --base01: #151312;
+  --base02: #1f1c1b;
+  --base03: #282625;
+  --base04: #8b8887;
+  --base05: #c0bdbb;
+  --base06: #d0cdcb;
+  --base07: #f1eeec;
+  --base08: #b3766d;
+  --base09: #a58251;
+  --base0A: #839059;
+  --base0B: #59987c;
+  --base0C: #4896a2;
+  --base0D: #678bb7;
+  --base0E: #8f7eb2;
+  --base0F: #ab7594;
   --white: #ffffff;
 }
 
@@ -36,12 +40,36 @@
   --secondary: var(--base0D);
 }
 
+/************************************
+               Fonts
+************************************/
 
+@font-face {
+  font-family: "CMU Sans Serif";
+  src:
+    url("computer-modern/cmunss.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "CMU Serif";
+  src:
+    url("computer-modern/cmunrm.ttf") format("truetype");
+}
 
+@font-face {
+  font-family: "CMU Typewriter";
+  src:
+    url("computer-modern/cmuntt.ttf") format("truetype");
+}
+
+/************************************
+           Actual Styling
+************************************/
 
 body {
   background-color: var(--black);
+  font-family: 'CMU Sans Serif', sans-serif;
+  font-size: 14pt;
 }
 main {
   background-color: var(--default-background);
@@ -50,6 +78,12 @@ main {
   margin: 1.5em;
   border: 3px var(--lighter-background) solid;
   border-radius: 0.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "CMU Serif", serif;
+}
+code {
+  font-family: "CMU Typewriter", monospace;
 }
 a:link {
   color: var(--primary);

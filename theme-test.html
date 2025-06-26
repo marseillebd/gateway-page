@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Theme Test</title>
+  <link rel="stylesheet" type="text/css" href="./structure.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./style.css" media="all">
+<style>
+:root{
+  /*
+  Tailwind "Stone-950" is #0c0a09 or oklch(14.69% 0.004 49.25).
+  I bumped the L to 15 for convenience, then incremented by 4 for each step.
+  */
+  --bg0: #0d0b0a;
+  --bg1: #151312;
+  --bg2: #1f1c1b;
+  --bg3: #282625;
+
+  /*
+    I Used the Tailwind stone hue and just made up some luminance values:
+      63 (matching the colors' luminance), 80, 85, 95/
+  */
+  --fg0: #8b8887;
+  --fg1: #c0bdbb;
+  --fg2: #d0cdcb;
+  --fg3: #f1eeec;
+
+  /*
+  Generated from https://nikhgupta.com/tools/palette-generator/ with:
+    Lightness: 0.6280
+    Chroma: 0.0782
+    Hue: 29.23
+    Palette Size 8, 45deg between hues
+    Using "Swatch (hue)"
+  */
+  --red: #b3766d;
+  --amber: #a58251;
+  --grass: #839059;
+  --green: #59987c;
+  --teal: #4896a2;
+  --blue: #678bb7;
+  --violet: #8f7eb2;
+  --pink: #ab7594;
+}
+</style>
+</head>
+<body>
+<p style='background-color: var(--bg0); color: var(--fg2)'>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation <span style='color: var(--fg3)'>ullamco</span> laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in <span>reprehenderit</span> in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+  <!--
+  for bg in 0 1 2 3; do
+    for fg in 0 1 2 3; do
+      echo "<div style='background-color: var(--bg$bg); color: var(--fg$fg);'>lorem ipsum<div>"
+    done
+  done
+  -->
+<div style='background-color: var(--bg0); color: var(--fg0);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--fg1);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--fg2);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--fg3);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--fg0);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--fg1);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--fg2);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--fg3);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--fg0);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--fg1);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--fg2);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--fg3);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--fg0);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--fg1);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--fg2);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--fg3);'>lorem ipsum<div>
+
+  <!--
+  for bg in 0 1 2 3; do
+    for fg in red amber grass green teal blue violet pink; do
+      echo "<div style='background-color: var(--bg$bg); color: var(--$fg);'>lorem ipsum<div>"
+    done
+  done
+  -->
+<div style='background-color: var(--bg0); color: var(--red);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--amber);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--grass);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--green);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--teal);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--blue);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--violet);'>lorem ipsum<div>
+<div style='background-color: var(--bg0); color: var(--pink);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--red);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--amber);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--grass);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--green);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--teal);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--blue);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--violet);'>lorem ipsum<div>
+<div style='background-color: var(--bg1); color: var(--pink);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--red);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--amber);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--grass);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--green);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--teal);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--blue);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--violet);'>lorem ipsum<div>
+<div style='background-color: var(--bg2); color: var(--pink);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--red);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--amber);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--grass);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--green);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--teal);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--blue);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--violet);'>lorem ipsum<div>
+<div style='background-color: var(--bg3); color: var(--pink);'>lorem ipsum<div>
+</body>
+</html>
